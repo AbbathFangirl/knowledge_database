@@ -9,15 +9,13 @@
 
     <title>Advoware</title>
 </head>
-<body>
+<body class="advoware">
 
 <table>
-<tr>
-    <td>Thema</td>
-    <td>Kurzbeschreibung</td>
-    <td>Anleitung</td>
-    <td>Video</td>
-</tr>
+    <th>Thema</th>
+    <th>Kurzbeschreibung</th>
+    <th>Anleitung</th>
+    <th>Video</th>
 
 <tr th:each="subject : ${subjects}">
     <td th:utext="${subject.description}"></td>
