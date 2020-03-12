@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Alle Themen</title>
+</head>
+<body>
+
+<h1>Userübersicht</h1>
+<table>
+    <tr>
+        <th>Anwendung</th>
+        <th>Beschreibung</th>
+        <th>Erklärung</th>
+        <th>PDF</th>
+        <th>Videotutorial</th>
+        <th>slfjdkljsdkfl</th>
+
+    <tr th:each="subject : ${subjects}">
+        <td th:utext="${subject.subject}"></td>
+        <td th:utext="${subject.description}"></td>
+        <td th:utext="${subject.explanation}"></td>
+        <td><a target="_blank" th:href="@{/pdfs/} + ${subject.id}">Anleitung ansehen</a></td>
+        <td><video width=70% controls="controls"><source th:src="@{/videos/} + ${subject.id}" type="video/mp4"></video></td>
+    </tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

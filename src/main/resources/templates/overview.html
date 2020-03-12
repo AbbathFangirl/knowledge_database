@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="style.css" th:href="@{/style.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hallo</title>
+</head>
+<body>
+<p>i bims</p>
+
+<!--
+<table>
+<tr th:each="subject : ${subjects}">
+    <td  ><a  th:href="${subject}"><p th:utext="${subject}"></p></a></td>
+    </table>-->
+<div th:each="subject : ${subjects}"><a  th:href="${subject}"><p th:utext="${subject}"></p></a></p></div>
+
+
+</body>
+</html>
+
