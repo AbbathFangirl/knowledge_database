@@ -6,15 +6,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Hallo</title>
 </head>
-<body>
-<p>i bims</p>
+<body class="overview">
+<h1>ALLE THEMEN</h1>
 
-<!--
-<table>
-<tr th:each="subject : ${subjects}">
-    <td  ><a  th:href="${subject}"><p th:utext="${subject}"></p></a></td>
-    </table>-->
-<div th:each="subject : ${subjects}"><a  th:href="${subject}"><p th:utext="${subject}"></p></a></p></div>
+<div th:each="subject : ${subjects}"><a class="sub_a"  th:href="${subject}"><p th:utext="${subject}"></p></a></p></div>
 
 
 </body>

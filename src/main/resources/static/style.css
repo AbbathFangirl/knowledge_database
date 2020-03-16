@@ -1,15 +1,13 @@
 body {
-
-	background-color: azure;
+    background-color: #333333;
 	font-family: bahnschrift;
 	font-size: 30px;
 	margin: 10px;
-
 }
 
-.advoware {
-	background-color: #333333;
-
+.overview {
+    background-color: #333333;
+	color: white;
 }
 
 a{
@@ -25,7 +23,7 @@ a{
 }
 
 
-.advoware th {
+th {
 	text-transform: uppercase;
 	font-size: 40px;
 	background-color: #ed3330;
@@ -36,7 +34,6 @@ th, td {
 
 }
 
-
 table {
 	position:absolute;
     width:100%;
@@ -45,39 +42,48 @@ table {
     vertical-align:middle;
     z-index: 9999;
 	border-radius: 5px;
-
-	 *border-collapse: collapse; /* IE7 and lower */
+	*border-collapse: collapse; /* IE7 and lower */
     border-spacing: 0;
 }
 
 video {
-
 	width: 80%;
 }
 
 
-.advoware tr {
+tr {
 	background-color: #E0E0E0;
+}
 
+td:first-child {
+	font-weight: bold;
 
 }
 
-
-.advoware tr:nth-child(even) {
+tr:nth-child(even) {
 	background-color: #BFB8B8;
 }
 
-.advoware tr:hover {
+tr:hover {
 	background-color: white;
-
 }
-
-
-
-
 
 a {
 	text-decoration: none;
-
-
 }
+
+div {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sub_a {
+	text-align: center;
+	width: 375px;
+	margin-left: auto;
+	margin-right: auto;
+ }
+
+

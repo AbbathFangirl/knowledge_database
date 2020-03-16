@@ -6,13 +6,19 @@
     <link href="style.css" th:href="@{/style.css}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body >
 
 <table>
+
+    <th>Thema</th>
+    <th>Kurzbeschreibung</th>
+    <th>Anleitung</th>
+    <th>Video</th>
+
     <tr th:each="subject : ${subjects}">
         <td th:utext="${subject.description}"></td>
         <td th:utext="${subject.explanation}"></td>
-        <td><a target="_blank" th:href="@{/pdfs/} + ${subject.id}">Anleitung ansehen</a></td>
+        <td><a target="_blank" th:href="@{/pdfs/} + ${subject.id}"><i class="fa fa-file-text"></i></a></td>
         <td><video width=70% controls="controls"><source th:src="@{/videos/} + ${subject.id}" type="video/mp4"></video></td>
     </tr>
 

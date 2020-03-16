@@ -72,6 +72,12 @@ public class SubjectController {
         return "outlook";
     }
 
+    @GetMapping("/telefon")
+    public String getTelefon(Model model) {
+        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"telefon"));
+        return "telefon";
+    }
+
 
     @GetMapping("/divers")
     public String getDivers(Model model) {
