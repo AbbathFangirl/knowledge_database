@@ -35,8 +35,7 @@ th, td {
 }
 
 table {
-	position:absolute;
-    width:100%;
+    max-width: 100%;
 	padding: 10px;
     text-align:center;
     vertical-align:middle;
@@ -57,6 +56,11 @@ tr {
 
 td:first-child {
 	font-weight: bold;
+	max-width: 150px;
+	min-width: 150px;
+	word-break: break-word;
+	hyphens: auto;
+	text-align: left;
 
 }
 
