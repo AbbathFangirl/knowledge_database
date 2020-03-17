@@ -4,12 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="style.css" th:href="@{/style.css}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Hallo</title>
+    <title>How2KSPP</title>
 </head>
 <body class="overview">
-<h1>ALLE THEMEN</h1>
+<h1 class="overview">ALLE THEMEN</h1>
 
-<div th:each="subject : ${subjects}"><a class="sub_a"  th:href="${subject}"><p th:utext="${subject}"></p></a></p></div>
+<div th:each="subject : ${subjects}"><a  class="sub_a"  th:href="${subject}"><p th:utext="${subject}"></p></a></p></div>
+
 
 
 </body>
