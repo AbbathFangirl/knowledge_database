@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import java.awt.print.Pageable;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class SubjectController {
         return new FileSystemResource(new File(subject.getPdf()));
     }
 
-    @GetMapping("/overview")
+    @GetMapping("/")
     public String welcome(HttpServletResponse response, Model model) {
         List<String> subjects = new ArrayList<String>();
         for (Subject sub : subjectRepository.findAll()) {
@@ -54,11 +55,24 @@ public class SubjectController {
         return "subjects";
     }
 
+
+    @GetMapping("/contacts")
+    public String getImportantNumbers() {
+        return "important_numbers";
+    }
+
+    @GetMapping("/manuals")
+    public String getManuals() {
+        return "manuals";
+    }
+
     @GetMapping("/advoware")
     public String getAdvoware(Model model) {
         model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"advoware"));
         return "advoware";
     }
+
+
 
     @GetMapping("/bea")
     public String getbeA(Model model) {
@@ -78,9 +92,16 @@ public class SubjectController {
         return "telefon";
     }
 
+    @GetMapping("/drucker")
+    public String getDrucker(Model model) {
+        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"drucker"));
+        return "drucker";
+    }
+
 
     @GetMapping("/divers")
     public String getDivers(Model model) {
+
         model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"divers"));
         return "divers";
     }
@@ -110,5 +131,8 @@ public class SubjectController {
     public void deleteSubject(@PathVariable int id) {
         subjectRepository.deleteById(id);
     }
+
+
+
 
 }
