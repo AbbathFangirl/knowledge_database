@@ -2,29 +2,32 @@
 <html lang="de" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Drucker</title>
     <link href="style.css" th:href="@{/style.css}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Font-Awesome/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Font-Awesome/css/solid.min.css">
+
+    <title>WICHTIGE KONTAKTDATEN</title>
 </head>
-<body >
+
+<body class="overview" >
 
 <a id="back" href="/"><svg aria-hidden="true" width="50px" focusable="false" data-prefix="fas" data-icon="angle-double-left" class="svg-inline--fa fa-angle-double-left fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg></a>
-<h1>DRUCKER</h1>
+<h1>UNDER CONSTRUCTION</h1>
 
-<table>
+    <div class="contact">
 
-    <th>Thema</th>
-    <th>Kurzbeschreibung</th>
-    <th>Anleitung</th>
-    <th>Video</th>
+        <a target="_blank" href="#"><h1>Advoware</h1></a>
+        <a target="_blank" href="#"><h1>Frankiermaschine</h1></a>
+        <a target="_blank" href="#"><h1>Telefonanlage</h1></a>
+        <a target="_blank" href="#"><h1>Canon</h1></a>
+        <a target="_blank" href="#"><h1>Develop</h1></a>
+        <a target="_blank" href="#"><h1>Kodak</h1></a>
 
-    <tr th:each="subject : ${subjects}">
-        <td th:utext="${subject.description}"></td>
-        <td th:utext="${subject.explanation}"></td>
-        <td><a id="table_a" target="_blank" th:href="@{/pdfs/} + ${subject.id}"><i class="fa fa-file-text"></i></a></td>
-        <td><video width=70% controls="controls"><source th:src="@{/videos/} + ${subject.id}" type="video/mp4"></video></td>
-    </tr>
+    </div>
 
-</table>
+
+
+
 </body>
 </html>
