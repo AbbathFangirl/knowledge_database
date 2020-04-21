@@ -197,8 +197,9 @@ h1.overview {
 
 
 
- .sub_a:hover,  {
-    background: #b51816;
+ .sub_a:hover  {
+
+    background: #b51816 !important;
     border-radius: 5px;
     display: block;
     border: none;
@@ -209,6 +210,11 @@ h1.overview {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
  }
+
+
+
+
+
   #table_a:hover {
      background: #b51816;
      border-radius: 5px;
@@ -476,10 +482,8 @@ body {
 
 
 .sub_a:hover p {
-
-color: white;
-animation-name: shake;
- animation-duration: 5s;
+    animation-name: shake;
+    animation-duration: 5s;
 }
 
 @keyframes shake {
@@ -559,5 +563,16 @@ input {
     margin: 10px;
     align: center;
 }
+
+
+#manuallink {
+
+    display: block;
+    font-size: 50px;
+    color: white;
+
+}
+
+
 
 

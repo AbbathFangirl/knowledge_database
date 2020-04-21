@@ -59,40 +59,36 @@ public class SubjectController {
         return "important_numbers";
     }
 
-    @GetMapping("/manuals")
-    public String getManuals() {
-        return "manuals";
-    }
+
 
     @GetMapping("/advoware")
     public String getAdvoware(Model model) {
-        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"advoware"));
+        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(), "advoware"));
         return "advoware";
     }
 
 
-
     @GetMapping("/bea")
     public String getbeA(Model model) {
-        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"bea"));
+        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(), "bea"));
         return "bea";
     }
 
     @GetMapping("/outlook")
     public String getOutlook(Model model) {
-        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"outlook"));
+        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(), "outlook"));
         return "outlook";
     }
 
     @GetMapping("/telefon")
     public String getTelefon(Model model) {
-        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"telefon"));
+        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(), "telefon"));
         return "telefon";
     }
 
     @GetMapping("/drucker")
     public String getDrucker(Model model) {
-        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"drucker"));
+        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(), "drucker"));
         return "drucker";
     }
 
@@ -100,10 +96,9 @@ public class SubjectController {
     @GetMapping("/divers")
     public String getDivers(Model model) {
 
-        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(),"divers"));
+        model.addAttribute("subjects", Util.filterBySubject(subjectRepository.findAll(), "divers"));
         return "divers";
     }
-
 
     @GetMapping(path = "/all", produces = "application/json")
     public Iterable<Subject> getAll() {
@@ -129,8 +124,6 @@ public class SubjectController {
     public void deleteSubject(@PathVariable int id) {
         subjectRepository.deleteById(id);
     }
-
-
 
 
 }
